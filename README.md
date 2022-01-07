@@ -77,7 +77,16 @@ demo图片预测结果
 [{'class_ids': [285, 281, 282, 287, 286], 'scores': [0.27909, 0.20617, 0.06177, 0.01999, 0.0168], 'file_name': 'demo/cat.jpg', 'label_names': ['Egyptian cat', 'tabby, tabby cat', 'tiger cat', 'lynx, catamount', 'cougar, puma, catamount, mountain lion, painter, panther, Felis concolor']}]
 ```
 
-## 5 引用
+## 5 tipc轻量测试
+
+```bash
+# 准备数据
+bash test_tipc/prepare.sh ./test_tipc/config/OctMobileNetV2/OctMobileNetV2_x1_25_train_infer_python.txt 'lite_train_lite_infer'
+# 运行测试
+bash test_tipc/test_train_inference_python.sh ./test_tipc/config/OctMobileNetV2/OctMobileNetV2_x1_25_train_infer_python.txt 'lite_train_lite_infer'
+```
+
+## 6 引用
 ```
 @article{chen2019drop,
   title={Drop an Octave: Reducing Spatial Redundancy in Convolutional Neural Networks with Octave Convolution},
